@@ -1,6 +1,6 @@
 // Часы на старт говорильные
-// Сделаны на основе лишней платы от SportIduino(Atmega328+DS3231) + MP3-TF-16P + усилитель PAM8610 + DC-DC 3В->12В
-// Питание АКБ LiIo, ток потребления в режиме ожидания 20мА.
+// Сделаны на основе лишней платы от SportIduino(Atmega328+DS3231) + MP3-TF-16P + 12В
+// Питание АКБ 12В, ток потребления в режиме ожидания 20мА.
 // Монтаж навесной 
 // Структура папок на карточке mp3/0100.mp3
 // Карточка должна быть отформатированна и папка MP3 залита за раз,
@@ -30,7 +30,7 @@
 #include "Sodaq_DS3231.h"
 #include <avr/sleep.h>
 
-const uint8_t Sleep_ampfiler = 15;    // пин Busy_mp3
+const uint8_t Sleep_ampfiler = 15;    // пин Sleep_ampfiler
 const uint8_t Busy_mp3 = 17;          // пин Busy_mp3
 const uint8_t Int_pin = 2;            // пин INT DS3231
 const uint8_t RX = 7;                 // SoftwareSerial RX
